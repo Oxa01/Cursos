@@ -18,6 +18,7 @@ contract Apuesta {
         }
         if(pozoTotal > 10 ether) {
          ganador.transfer(pozoTotal);
+         //una vez que se envía el premio al ganador, las variables globales se resetean a cero
          pozoTotal = 0;
          ganador = payable(address(0));
          importeMayor = 0;
